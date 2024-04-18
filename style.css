@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header {
+    z-index: 40;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-right: 15px;
+}
+
+ul a {
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 10px;
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.seccion-video {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.seccion-video h2 {
+    padding-top: 200px;
+    font-size: 2em;
+}
+
+.content-wrapper {
+    z-index: 30;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+
+.content-header p {
+    font-size: 1.2em;
+}
+
+.content-footer {
+    z-index: 30;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 200px;
+}
+
+.content-footer div .button {
+    text-decoration: none;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content-footer div .button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.video-wrapper {
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.video-tag {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* MAIN (tarjetas) */
+
+.seccion-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Assets/estrellas.avif);
+}
+
+.titulo {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    align-self: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 20px;
+    max-width: max-content;
+    position: relative;
+}
+
+.card-container {
+    width: 280px;
+    height: 520px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #232877e5;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: #fff;
+    transition: 2s;
+    box-sizing: border-box;
+}
+
+.card-container:hover .card-content {
+    right: 0;
+}
+
+.card-content h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+}   
+
+.card-content .p-below {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.p-below + p {
+    margin-top: 20px;
+}
+
+@media (width < 882px){
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width < 581px){
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
