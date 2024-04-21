@@ -116,6 +116,19 @@ ul a {
   width: 100%;
 }
 
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translateY(0, 100px);
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 /* MAIN (tarjetas) */
 
 .seccion-tarjetas {
@@ -214,6 +227,11 @@ img {
   .card-container {
     width: 100%;
   }
+
+  .seccion-tarjetas {
+    background-image: none;
+  }
+
 }
 
 @media (width < 581px) {
@@ -232,11 +250,6 @@ img {
   }
 }
 
-@media (width < 1450px) {
-  .imagenes-fondo {
-    display: none;
-  }
-}
 
 /* FOOTER */
 
@@ -276,15 +289,3 @@ img {
   padding-top: 5px;
 }
 
-@keyframes animate {
-  from {
-    opacity: 0;
-    transform: translateY(0, 100px);
-    filter: blur(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
