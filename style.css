@@ -230,6 +230,7 @@ img {
 
   .seccion-tarjetas {
     background-image: none;
+    background-color: #000;
   }
 
 }
