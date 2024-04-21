@@ -9,17 +9,13 @@
 .nav-header {
   box-sizing: border-box;
   z-index: 40;
-  padding: 8px 8px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   justify-content: space-between;
-}
-
-.nav-links li {
-  padding: 7px;
 }
 
 .nav-header img {
@@ -232,7 +228,7 @@ img {
   }
 
   .titulo {
-    padding-top: 45px;
+    padding-top: 48px;
   }
 }
 
@@ -277,6 +273,7 @@ img {
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
+  padding-top: 5px;
 }
 
 @keyframes animate {
